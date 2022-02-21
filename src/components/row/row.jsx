@@ -6,7 +6,6 @@ const Row = () => {
   return (
     <div className="rowc">
       <Navbar />
-      <Feed />
     </div>
   );
 };
