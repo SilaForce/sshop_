@@ -27,3 +27,9 @@
   background: transparent;
   border: 1px black solid;
 }
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
