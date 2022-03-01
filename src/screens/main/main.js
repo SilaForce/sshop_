@@ -5,10 +5,11 @@ import Navbar from "../../components/navbar/navbar";
 import Row from "../../components/row/row";
 
 const Main = () => {
+  const [visible, setVisible] = React.useState(true);
   return (
     <div>
       <Header />
-      <Navbar />
+      {visible && <Navbar />}
     </div>
   );
 };
