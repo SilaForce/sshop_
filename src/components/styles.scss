@@ -1,0 +1,25 @@
+@import "./header/styles.scss";
+@import "./navbar/styles.scss";
+@import "./feed/styles.scss";
+@import "./row/row.scss";
+@import "./navbar/admin_bar/styles.scss";
+
+body {
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+.row {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center1 {
+  display: flex;
+  justify-content: flex-start;
+}
