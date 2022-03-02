@@ -3,11 +3,17 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../tippy";
 import Tippy from "@tippyjs/react";
+import { useSpring, animated } from "react-spring";
 
 const Aheader = () => {
   const navigate = useNavigate();
+  const styles = useSpring({
+    from: { marginTop: -500 },
+    to: [{ marginTop: 0 }],
+    config: { delay: 100 },
+  });
   return (
-    <div className="header">
+    <animated.div className="header" style={styles}>
       <div className="center">
         <motion.button
           onClick={() => navigate("/")}
@@ -37,7 +43,7 @@ const Aheader = () => {
           </motion.button>
         </Tippy>
       </div>
-    </div>
+    </animated.div>
   );
 };
 

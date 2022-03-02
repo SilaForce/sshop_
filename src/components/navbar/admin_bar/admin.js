@@ -1,6 +1,7 @@
 import React from "react";
+import { useSpring, animated } from "react-spring";
 
 const Anavbar = () => {
-  return <div className="nvbar"></div>;
+  return <animated.div className="nvbar"></animated.div>;
 };
 export default Anavbar;

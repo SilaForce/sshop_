@@ -1,22 +1,23 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import Navbar from "../navbar/navbar";
+import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 import "../tippy";
+import { useSpring, animated } from "react-spring";
 
 const Header = () => {
-  const [visible, setVisible] = React.useState(true);
+  const styles = useSpring({
+    from: { marginTop: -500 },
+    to: [{ marginTop: 0 }],
+    config: { delay: 100 },
+  });
+
   const navigate = useNavigate();
   return (
     <div>
-      <div className="header">
+      <animated.div className="header" style={styles}>
         <div className="center">
-          <motion.button
-            whileHover={{ scale: 1.2 }}
-            className="ham_button"
-            onClick={() => setVisible(!visible)}
-          >
+          <motion.button whileHover={{ scale: 1.2 }} className="ham_button">
             <img
               className="img_ham"
               src={require("../../images/ham.svg").default}
@@ -44,7 +45,6 @@ const Header = () => {
             </motion.button>
           </Tippy>
         </div>
-
         <div className="center">
           <input type="input" placeholder="Search" className="search"></input>
 
@@ -52,7 +52,7 @@ const Header = () => {
             <img src={require("../../images/search.svg").default} alt=""></img>
           </button>
         </div>
-      </div>
+      </animated.div>
     </div>
   );
 };

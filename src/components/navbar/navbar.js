@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Tippy from "@tippyjs/react";
 import "../tippy";
+import { useSpring, animated } from "react-spring";
 
 const Navbar = () => {
+  const styles = useSpring({
+    from: { marginLeft: -500 },
+    to: { marginLeft: 0 },
+    config: { delay: 100 },
+  });
   return (
-    <div className="navbar">
+    <animated.div className="navbar" style={styles}>
       <div className="center">
         <div className="row">
           <Tippy
@@ -106,7 +112,7 @@ const Navbar = () => {
           </Tippy>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 };
 
