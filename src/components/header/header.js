@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import Tippy from "@tippyjs/react";
-import "../tippy";
+import React from "react";
+
 import { useSpring, animated } from "react-spring";
+import Profile_butt from "../buttons/profile_butt";
+import Ham_butt from "../buttons/ham_butt";
 
 const Header = () => {
   const styles = useSpring({
@@ -12,18 +11,11 @@ const Header = () => {
     config: { delay: 100 },
   });
 
-  const navigate = useNavigate();
   return (
     <div>
       <animated.div className="header" style={styles}>
         <div className="center">
-          <motion.button whileHover={{ scale: 1.2 }} className="ham_button">
-            <img
-              className="img_ham"
-              src={require("../../images/ham.svg").default}
-              alt=""
-            ></img>
-          </motion.button>
+          <Ham_butt />
 
           <img
             className="logo"
@@ -31,19 +23,7 @@ const Header = () => {
             alt=""
           ></img>
 
-          <Tippy theme={"black"} content={<span>Profile</span>}>
-            <motion.button
-              onClick={() => navigate("/profile")}
-              whileHover={{ scale: 1.2 }}
-              className="prof_butt"
-            >
-              <img
-                className="profile"
-                src={require("../../images/profile.svg").default}
-                alt=""
-              ></img>
-            </motion.button>
-          </Tippy>
+          <Profile_butt />
         </div>
         <div className="center">
           <input type="input" placeholder="Search" className="search"></input>
