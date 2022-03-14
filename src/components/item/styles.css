@@ -1,0 +1,15 @@
+.align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.item {
+  margin: 50px 0px 0px 0px;
+  height: 100px;
+  width: 300px;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=styles.css.map */

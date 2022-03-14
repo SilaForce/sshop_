@@ -63,6 +63,11 @@
   border: 1px solid black;
   cursor: pointer;
   margin: 15px 0px 0px 1px;
+  background-color: transparent;
+}
+
+.header .search_butt:hover {
+  opacity: 0.7;
 }
 
 .header ::-webkit-input-placeholder {
@@ -83,5 +88,28 @@
 .header ::placeholder {
   color: black;
   padding-left: 10px;
+}
+
+.tippy-box[data-theme~="black"] {
+  background-color: black;
+  color: white;
+}
+
+.tippy-box[data-theme~="black"][data-placement^="top"] > .tippy-arrow::before {
+  border-top-color: black;
+}
+
+.tippy-box[data-theme~="black"][data-placement^="bottom"]
+> .tippy-arrow::before {
+  border-bottom-color: black;
+}
+
+.tippy-box[data-theme~="black"][data-placement^="left"] > .tippy-arrow::before {
+  border-left-color: black;
+}
+
+.tippy-box[data-theme~="black"][data-placement^="right"]
+> .tippy-arrow::before {
+  border-right-color: black;
 }
 /*# sourceMappingURL=styles.css.map */

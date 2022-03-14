@@ -1,0 +1,11 @@
+.nvbar {
+  width: 230px;
+  max-height: 100vh;
+  background-color: black;
+  height: calc(100vh - 70px);
+  -webkit-box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  margin: 5px;
+}
+/*# sourceMappingURL=styles.css.map */
