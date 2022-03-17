@@ -7,4 +7,18 @@
   height: 100px;
   width: 300px;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .details {
+    float: left;
+  }
+  .cell {
+    margin-left: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
