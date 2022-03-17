@@ -1,0 +1,23 @@
+{
+  "items":[
+  {
+    "Naziv": "Patike",
+    "Cijena": "100.00 KM",
+    "Kategorija": "Obuca",
+    "Stanje": "Novo"
+  },
+  {
+    "Naziv": "fon",
+    "Cijena": "150.00 KM",
+    "Kategorija": "elek",
+    "Stanje": "Novo"
+  },
+  {
+    "Naziv": "fon",
+    "Cijena": "150.00 KM",
+    "Kategorija": "elek",
+    "Stanje": "Novo"
+  }
+
+]
+}
