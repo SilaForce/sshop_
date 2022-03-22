@@ -1,22 +1,28 @@
 {
   "items":[
   {
-    "Naziv": "Patike",
-    "Cijena": "100.00 KM",
-    "Kategorija": "Obuca",
-    "Stanje": "Novo"
+    "name": "Samsung",
+    "price": "250",
+    "condition": "New",
+    "location": "",
+    "category": "",
+    "description": ""
   },
   {
-    "Naziv": "fon",
-    "Cijena": "150.00 KM",
-    "Kategorija": "elek",
-    "Stanje": "Novo"
+    "name": "ssss",
+    "price": "sss",
+    "condition": "sss",
+    "location": "",
+    "category": "",
+    "description": ""
   },
   {
-    "Naziv": "fon",
-    "Cijena": "150.00 KM",
-    "Kategorija": "elek",
-    "Stanje": "Novo"
+    "name": "ccc",
+    "price": "cc",
+    "condition": "cc",
+    "location": "",
+    "category": "",
+    "description": ""
   }
 
 ]
