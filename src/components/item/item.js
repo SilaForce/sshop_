@@ -5,14 +5,16 @@ function Item({ data }) {
     <div className="item">
       <div className="icon"></div>
       <div className="details">
-        {Object.keys(data).map((attr) => {
-          return <div>{attr}</div>;
-        })}
+        <ul className="no-bullets">
+          <li>Name</li>
+          <li>Price</li>
+          <li>Condition</li>
+        </ul>
       </div>
       <div className="cell">
-        {Object.values(data).map((attr) => {
-          return <div>{attr}</div>;
-        })}
+        <div>{data.name}</div>
+        <div>{data.price}</div>
+        <div>{data.condition}</div>
       </div>
     </div>
   );
