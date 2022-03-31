@@ -1,29 +1,14 @@
 {
-  "items":[
-  {
-    "name": "Samsung",
-    "price": "250",
-    "condition": "New",
-    "location": "",
-    "category": "",
-    "description": ""
-  },
-  {
-    "name": "ssss",
-    "price": "sss",
-    "condition": "sss",
-    "location": "",
-    "category": "",
-    "description": ""
-  },
-  {
-    "name": "ccc",
-    "price": "cc",
-    "condition": "cc",
-    "location": "",
-    "category": "",
-    "description": ""
-  }
-
-]
+  "items": [
+    {
+      "name": "ASUS",
+      "price": "250",
+      "location": "Sarajevo",
+      "condition": "New",
+      "category": "Technology",
+      "description": "Top laptop grmi",
+      "id": 1
+    }
+  
+  ]
 }
