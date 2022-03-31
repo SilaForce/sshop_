@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 
@@ -13,19 +13,9 @@ class Input extends React.Component {
   };
 
   add = (e) => {
+    const axios = require("axios");
     e.preventDefault();
 
-    if (
-      this.state.name === "" ||
-      this.state.price === "" ||
-      this.state.location === "" ||
-      this.state.description === "" ||
-      this.state.category === "" ||
-      this.state.condition === ""
-    ) {
-      alert("Empty field!!!");
-      return;
-    }
     this.setState({
       name: "",
       price: "",
@@ -34,10 +24,28 @@ class Input extends React.Component {
       category: "",
       description: "",
     });
+    console.log(this.state);
+
+    axios
+      .post("http://localhost:5000/items", {
+        name: this.state.name,
+        price: this.state.price,
+        location: this.state.location,
+        condition: this.state.condition,
+        category: this.state.category,
+        description: this.state.description,
+      })
+      .then((resp) => {
+        console.log(resp.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   render() {
     return (
+ 
       <form onSubmit={this.add}>
         <div>
           <input
@@ -65,22 +73,44 @@ class Input extends React.Component {
             value={this.state.location}
             onChange={(e) => this.setState({ location: e.target.value })}
           ></input>
-          <input
+          <select
             type="text"
             className="input"
             placeholder="Condition"
             name="condition"
             value={this.state.condition}
             onChange={(e) => this.setState({ condition: e.target.value })}
-          ></input>
-          <input
+          >
+        
+            <option className="option">Condition</option>
+            <option className="option" value="new">
+              New
+            </option>
+            <option className="option" value="used">
+              Used
+            </option>
+          </select>
+          <select
             type="text"
             className="input"
-            placeholder="Category"
             name="category"
             value={this.state.category}
             onChange={(e) => this.setState({ category: e.target.value })}
-          ></input>
+          >
+            <option className="option">Category</option>
+            <option className="option" value="technology">
+              Technology
+            </option>
+            <option className="option" value="cars">
+              Cars
+            </option>
+            <option className="option" value="clothes">
+              Clothes
+            </option>
+            <option className="option" value="house">
+              House
+            </option>
+          </select>
           <input
             type="text"
             className="input"
