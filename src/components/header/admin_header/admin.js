@@ -24,7 +24,9 @@ const Aheader = () => {
           src={require("../../../images/SSlogo.png")}
           alt=""
         ></img>
-        <Basket_butt />
+        <div className="right">
+          <Basket_butt />
+        </div>
       </div>
     </animated.div>
   );
