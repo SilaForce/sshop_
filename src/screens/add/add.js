@@ -7,6 +7,7 @@ function Add() {
   return (
     <div>
       <Header />
+      <h1 className="addtxt">Add Item</h1>
       <Add_scre />
     </div>
   );
