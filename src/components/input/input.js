@@ -16,6 +16,18 @@ class Input extends React.Component {
     const axios = require("axios");
     e.preventDefault();
 
+    if (
+      this.state.name === "" ||
+      this.state.price === "" ||
+      this.state.location === "" ||
+      this.state.description === "" ||
+      this.state.category === "" ||
+      this.state.condition === ""
+    ) {
+      alert("Empty field!!!");
+      return;
+    }
+
     this.setState({
       name: "",
       price: "",
@@ -45,8 +57,7 @@ class Input extends React.Component {
 
   render() {
     return (
- 
-      <form onSubmit={this.add}>
+      <form autocomplete="off" onSubmit={this.add}>
         <div>
           <input
             type="text"
@@ -81,7 +92,6 @@ class Input extends React.Component {
             value={this.state.condition}
             onChange={(e) => this.setState({ condition: e.target.value })}
           >
-        
             <option className="option">Condition</option>
             <option className="option" value="new">
               New
