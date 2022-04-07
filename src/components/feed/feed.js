@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Item from "../item/item";
+import Sitem from "../item/sitem/sitem";
 
 const Feed = () => {
   const [items, setItems] = useState([]);
@@ -17,12 +17,10 @@ const Feed = () => {
   return (
     <div className="cf">
       <div className="feed">
-        <div className="align">
-          {items &&
-            items.map((item, value) => {
-              return <Item data={item} />;
-            })}
-        </div>
+        {items &&
+          items.map((item) => {
+            return <Sitem data={item} />;
+          })}
       </div>
     </div>
   );

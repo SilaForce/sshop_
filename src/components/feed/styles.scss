@@ -6,6 +6,9 @@
     height: 410px;
     background: transparent;
     border: none;
+    display: flex;
+    flex-wrap: wrap;
+    
   }
   .feed::-webkit-scrollbar {
     display: none;
