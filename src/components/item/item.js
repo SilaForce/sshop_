@@ -14,6 +14,8 @@ function Item({ data }) {
             <div className="output">{data.category}</div>
             <div className="output">{data.location}</div>
           </div>
+          <div className="item-image">IMAGE</div>
+          <div className="desc">{data.description}</div>
         </div>
       </div>
     </div>
