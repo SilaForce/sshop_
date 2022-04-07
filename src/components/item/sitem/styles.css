@@ -1,14 +1,6 @@
-.align {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .item {
   border-radius: 5px;
-  margin: 50px 0px 0px 0px;
+  margin: 40px 40px;
   height: 100px;
   width: 300px;
   -webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
@@ -29,7 +21,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  cursor: default;
+  cursor: pointer;
 }
 
 .item .icon {
