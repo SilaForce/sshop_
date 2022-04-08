@@ -1,19 +1,19 @@
-.middle {
   .frame {
     border-radius: 10px;
     box-shadow: 5px 5px 5px gray;
     width: 600px;
     height: 400px;
     background-color: black;
-    margin: 6% 50px;
+    margin: 3% 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: static;
     .inframe {
       margin: 0px 20px;
     }
   }
-}
+
 .img_img {
   width: 100px;
   height: 100px;

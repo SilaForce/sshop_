@@ -27,15 +27,7 @@
   margin-top: 5px;
 }
 
-.header .right {
-  margin-left: auto;
-  margin-right: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header .right .add {
+.header .add {
   cursor: pointer;
   background: none;
   border: none;
@@ -43,9 +35,17 @@
   width: 50px;
 }
 
-.header .right .add .imgadd {
+.header .add .imgadd {
   width: 30px;
   height: 30px;
+}
+
+.header .right {
+  margin-left: auto;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header .prof_butt {
@@ -63,69 +63,25 @@
   margin-top: 7px;
 }
 
-.header .search {
-  width: 400px;
-  height: 30px;
-  border-radius: 3px;
-  border: 1px solid #000000;
-  background: transparent;
-  color: black;
-  margin: 15px 0px 0px 0px;
-}
-
-.header .search_butt {
-  height: 34px;
-  width: 30px;
-  border-radius: 3px;
-  border: 1px solid black;
-  cursor: pointer;
-  margin: 15px 0px 0px 1px;
-  background-color: transparent;
-}
-
-.header .search_butt:hover {
-  opacity: 0.7;
-}
-
-.header ::-webkit-input-placeholder {
-  color: black;
-  padding-left: 10px;
-}
-
-.header :-ms-input-placeholder {
-  color: black;
-  padding-left: 10px;
-}
-
-.header ::-ms-input-placeholder {
-  color: black;
-  padding-left: 10px;
-}
-
-.header ::placeholder {
-  color: black;
-  padding-left: 10px;
-}
-
-.tippy-box[data-theme~="black"] {
+.header .tippy-box[data-theme~="black"] {
   background-color: black;
   color: white;
 }
 
-.tippy-box[data-theme~="black"][data-placement^="top"] > .tippy-arrow::before {
+.header .tippy-box[data-theme~="black"][data-placement^="top"] > .tippy-arrow::before {
   border-top-color: black;
 }
 
-.tippy-box[data-theme~="black"][data-placement^="bottom"]
+.header .tippy-box[data-theme~="black"][data-placement^="bottom"]
 > .tippy-arrow::before {
   border-bottom-color: black;
 }
 
-.tippy-box[data-theme~="black"][data-placement^="left"] > .tippy-arrow::before {
+.header .tippy-box[data-theme~="black"][data-placement^="left"] > .tippy-arrow::before {
   border-left-color: black;
 }
 
-.tippy-box[data-theme~="black"][data-placement^="right"]
+.header .tippy-box[data-theme~="black"][data-placement^="right"]
 > .tippy-arrow::before {
   border-right-color: black;
 }

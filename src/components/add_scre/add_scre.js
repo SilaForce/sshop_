@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 function Add_scre() {
   return (
-    <div className="middle">
       <div className="frame">
         <div className="inframe">
           <Input />
@@ -17,7 +16,7 @@ function Add_scre() {
           />
         </motion.div>
       </div>
-    </div>
+
   );
 }
 

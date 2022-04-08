@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 class Input extends React.Component {
   state = {
@@ -60,34 +61,34 @@ class Input extends React.Component {
       <form autocomplete="off" onSubmit={this.add}>
         <div>
           <input
+            placeholder="Name"
             type="text"
             className="input"
-            placeholder="Name"
             name="name"
             value={this.state.name}
             onChange={(e) => this.setState({ name: e.target.value })}
           ></input>
+
           <input
+            placeholder="Price"
             type="text"
             className="input"
-            placeholder="Price"
             name="price"
             value={this.state.price}
             onChange={(e) => this.setState({ price: e.target.value })}
           ></input>
-          ;
           <input
+            placeholder="Location"
             type="text"
             className="input"
-            placeholder="Location"
             name="location"
             value={this.state.location}
             onChange={(e) => this.setState({ location: e.target.value })}
           ></input>
+
           <select
             type="text"
             className="input"
-            placeholder="Condition"
             name="condition"
             value={this.state.condition}
             onChange={(e) => this.setState({ condition: e.target.value })}
@@ -100,6 +101,7 @@ class Input extends React.Component {
               Used
             </option>
           </select>
+
           <select
             type="text"
             className="input"
@@ -121,10 +123,11 @@ class Input extends React.Component {
               House
             </option>
           </select>
+
           <input
+            placeholder="Description"
             type="text"
             className="input"
-            placeholder="Description"
             name="description"
             value={this.state.description}
             onChange={(e) => this.setState({ description: e.target.value })}

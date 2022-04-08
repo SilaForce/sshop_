@@ -1,7 +1,21 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { animated } from "react-spring";
+
+import { useNavigate } from "react-router-dom";
 
 const Anavbar = () => {
-  return <animated.div className="nvbar"></animated.div>;
+  const navigate = useNavigate();
+  return (
+    <animated.div className="nvbar">
+      <div className="wrapper">
+        <div className="avatar"></div>
+        <div className="info">Profile Details</div>
+        <div className="info" onClick={() => navigate("/myitems")}>
+          My Items
+        </div>
+        <div className="info">Payment methods</div>
+      </div>
+    </animated.div>
+  );
 };
 export default Anavbar;

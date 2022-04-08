@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Buy from "../buttons/buy_butt";
 
 function Item({ data }) {
   return (
@@ -17,6 +18,7 @@ function Item({ data }) {
           <div className="item-image">IMAGE</div>
           <div className="desc">{data.description}</div>
         </div>
+        <Buy />
       </div>
     </div>
   );

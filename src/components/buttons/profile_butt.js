@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 import { motion } from "framer-motion";
 
-function Profile_butt() {
+function Profile_butt(props) {
   const navigate = useNavigate();
   return (
     <Tippy theme={"black"} content={<span>Profile</span>}>

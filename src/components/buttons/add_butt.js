@@ -6,16 +6,19 @@ import { useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
-function Add_btn() {
+function Add_btn(props) {
   const navigate = useNavigate();
   return (
     <div className="right">
       <Tippy theme={"black"} content={<span>Add Item</span>}>
-        <motion.button whileHover={{ scale: 1.2 }} className="add">
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          className="add"
+          onClick={() => navigate("/add")}
+        >
           <img
             className="imgadd"
             src={require("../../images/add-folder.svg").default}
-            onClick={() => navigate("/add")}
           ></img>
         </motion.button>
       </Tippy>

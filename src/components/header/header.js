@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { useSpring, animated } from "react-spring";
 import Profile_butt from "../buttons/profile_butt";
-import Ham_butt from "../buttons/ham_butt";
+import Leftarrow_butt from "../buttons/leftarrow_butt";
 import Add_btn from "../buttons/add_butt";
 
+import { useLocation } from "react-router-dom";
+import Basket_butt from "../buttons/basket_butt";
+import Search from "../search/search";
+
 const Header = () => {
+  const location = useLocation();
+  const [url, setUrl] = useState(location.pathname);
+  useEffect(() => {
+    if (location.pathname !== url) setUrl(location.pathname);
+    console.log("Url se promijenio");
+  }, [location]);
+
   const styles = useSpring({
     from: { marginTop: -500 },
     to: [{ marginTop: 0 }],
@@ -16,23 +27,23 @@ const Header = () => {
     <div>
       <animated.div className="header" style={styles}>
         <div className="center">
-          <Ham_butt />
+          {url == "/" && <Profile_butt />}
+          {url == "/profile" && <Leftarrow_butt />}
+          {url == "/profile/basket" && <Leftarrow_butt />}
+          {url == "/add" && <Leftarrow_butt />}
+          {url == "/item" && <Leftarrow_butt />}
           <img
             className="logo"
             src={require("../../images/SSlogo.png")}
             alt=""
           ></img>
-          <div className="right">
-            <Add_btn />
-            <Profile_butt />
-          </div>
+          {url == "/" && <Add_btn />}
+          {url == "/profile" && <Basket_butt />}
+          {url == "/item" && <Basket_butt />}
+          {url == "/profile/basket" && <div className="right"></div>}
+          {url == "/add" && <div className="right"></div>}
         </div>
-        <div className="center">
-          <input type="input" placeholder="Search" className="search"></input>
-          <button className="search_butt">
-            <img src={require("../../images/search.svg").default} alt=""></img>
-          </button>
-        </div>
+        {url == "/" && <Search />}
       </animated.div>
     </div>
   );
