@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Aheader from "../../components/header/admin_header/admin";
 import Item from "../../components/item/item";
 
 function ItemScreen() {
@@ -17,7 +16,6 @@ function ItemScreen() {
 
   return (
     <div>
-      <Aheader />
       {items &&
         items.map((item) => {
           return <Item data={item} />;
