@@ -32,16 +32,18 @@ const Header = () => {
           {url == "/profile/basket" && <Leftarrow_butt />}
           {url == "/add" && <Leftarrow_butt />}
           {url == "/item" && <Leftarrow_butt />}
+          {url == "/myitems" && <Leftarrow_butt />}
           <img
             className="logo"
             src={require("../../images/SSlogo.png")}
             alt=""
           ></img>
           {url == "/" && <Add_btn />}
-          {url == "/profile" && <Basket_butt />}
-          {url == "/item" && <Basket_butt />}
+          {url == "/profile" && <div className="right"></div>}
+          {url == "/item" && <div className="right"></div>}
           {url == "/profile/basket" && <div className="right"></div>}
           {url == "/add" && <div className="right"></div>}
+          {url == "/myitems" && <div className="right"></div>}
         </div>
         {url == "/" && <Search />}
       </animated.div>
