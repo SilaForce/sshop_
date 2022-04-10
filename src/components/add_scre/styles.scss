@@ -2,13 +2,14 @@
     border-radius: 10px;
     box-shadow: 5px 5px 5px gray;
     width: 600px;
-    height: 400px;
+    height: 450px;
     background-color: black;
-    margin: 3% 50px;
+    margin: 1% 50px 0px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: static;
+    overflow: hidden;
     .inframe {
       margin: 0px 20px;
     }
@@ -20,7 +21,7 @@
 }
 
 .submit {
-  margin: 10px 0px 0px 147%;
+  margin: 0px 0px 125px 175%;
   cursor: pointer;
   border: none;
   background: transparent;
