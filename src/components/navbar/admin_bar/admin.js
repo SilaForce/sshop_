@@ -8,7 +8,10 @@ const Anavbar = () => {
   return (
     <animated.div className="nvbar">
       <div className="wrapper">
-        <div className="avatar"></div>
+        <div className="avatar">
+          <img src={require("../../../images/user.svg").default} />
+        </div>
+        <div className="user">Amar Silajdzic</div>
         <div className="info">Profile Details</div>
         <div className="info" onClick={() => navigate("/myitems")}>
           My Items
