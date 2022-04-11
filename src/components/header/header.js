@@ -39,8 +39,8 @@ const Header = () => {
             alt=""
           ></img>
           {url == "/" && <Add_btn />}
-          {url == "/profile" && <Basket_butt />}
-          {url == "/item" && <Basket_butt />}
+          {url == "/profile" && <div className="right"></div>}
+          {url == "/item" && <div className="right"></div>}
           {url == "/profile/basket" && <div className="right"></div>}
           {url == "/add" && <div className="right"></div>}
           {url == "/myitems" && <div className="right"></div>}

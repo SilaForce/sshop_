@@ -33,5 +33,25 @@
           align-items: center;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.nvbar .user {
+  width: 180px;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
