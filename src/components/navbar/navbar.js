@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="row">
           <Tippy
             theme={"black"}
-            placement="right"
+            placement="bottom"
             content={<div>Vehicles</div>}
           >
             <motion.button whileHover={{ scale: 1.3 }} className="button">
@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="row">
           <Tippy
             theme={"black"}
-            placement="right"
+            placement="bottom"
             content={<div>Technology</div>}
           >
             <motion.button whileHover={{ scale: 1.3 }} className="button">
@@ -50,7 +50,7 @@ const Navbar = () => {
 
       <div className="center">
         <div className="row">
-          <Tippy theme={"black"} placement="right" content={<div>House</div>}>
+          <Tippy theme={"black"} placement="bottom" content={<div>House</div>}>
             <motion.button whileHover={{ scale: 1.3 }} className="button">
               <img
                 className="image"
@@ -64,7 +64,11 @@ const Navbar = () => {
 
       <div className="center">
         <div className="row">
-          <Tippy theme={"black"} placement="right" content={<div>Clothes</div>}>
+          <Tippy
+            theme={"black"}
+            placement="bottom"
+            content={<div>Clothes</div>}
+          >
             <motion.button whileHover={{ scale: 1.3 }} className="button">
               <img
                 className="image"

@@ -5,7 +5,7 @@ const Feed = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("http://localhost:4000/items")
       .then((res) => {
         return res.json();
       })

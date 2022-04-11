@@ -6,7 +6,6 @@ import Feed from "../feed/feed";
 function Row() {
   return (
     <div className="rowc">
-      <Navbar />
       <Feed />
     </div>
   );

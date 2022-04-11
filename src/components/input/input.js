@@ -18,19 +18,6 @@ class Input extends React.Component {
     const axios = require("axios");
     e.preventDefault();
 
-    if (
-      this.state.name === "" ||
-      this.state.price === "" ||
-      this.state.location === "" ||
-      this.state.contact === "" ||
-      this.state.description === "" ||
-      this.state.category === "" ||
-      this.state.condition === ""
-    ) {
-      alert("Empty field!!!");
-      return;
-    }
-
     this.setState({
       name: "",
       price: "",
@@ -43,10 +30,28 @@ class Input extends React.Component {
     console.log(this.state);
 
     axios
-      .post("http://localhost:5000/items", {
+      .post("http://localhost:4000/items", {
         name: this.state.name,
         price: this.state.price,
         location: this.state.location,
+        contact: this.state.contact,
+        condition: this.state.condition,
+        category: this.state.category,
+        description: this.state.description,
+      })
+      .then((resp) => {
+        console.log(resp.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    axios
+      .post("http://localhost:4000/myitems", {
+        name: this.state.name,
+        price: this.state.price,
+        location: this.state.location,
+        contact: this.state.contact,
         condition: this.state.condition,
         category: this.state.category,
         description: this.state.description,
@@ -129,11 +134,11 @@ class Input extends React.Component {
               <option className="option" value="Cars">
                 Cars
               </option>
-              <option className="option" value="Clothes">
-                Clothes
+              <option className="option" value="Clothes&Shoes">
+                Clothes&Shoes
               </option>
-              <option className="option" value="House">
-                House
+              <option className="option" value="House equipment">
+                House equipment
               </option>
             </select>
 
