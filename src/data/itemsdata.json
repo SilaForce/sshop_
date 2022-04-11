@@ -4,11 +4,52 @@
       "name": "ASUS",
       "price": "250",
       "location": "Sarajevo",
+      "contact": "060-482-745",
       "condition": "New",
       "category": "Technology",
       "description": "Top laptop grmi",
       "id": 1
+    },
+    {
+      "name": "VW PASSAT B7 ",
+      "price": "17.800",
+      "location": "Vogošća",
+      "contact": "061-715-985",
+      "condition": "Used",
+      "category": "Cars",
+      "description": "VW PASSAT 1.6 TDI. Vrata sa električnim podizačima stakala. Daljinsko centralno zaključavanje...",
+      "id": 2
+    },
+    {
+      "name": "Dell Gaming Monitor",
+      "price": "399",
+      "location": "Sarajevo",
+      "contact": "062-424-736",
+      "condition": "New",
+      "category": "Technology",
+      "description": "Dell Gaming Monitor S2522HG, 24.5\" FHD 1920x1080 240Hz 16:9.",
+      "id": 3
+    },
+    {
+      "name": "Nike patike Revolution 5",
+      "price": "90",
+      "location": "Visoko",
+      "contact": "060-795-214",
+      "condition": "New",
+      "category": "Clothes&Shoes",
+      "description": "Nike I Revolution 5 nove. Izuzetno lagane i udobne patike.",
+      "id": 4
+    },
+    {
+      "name": "ZAMRZIVAC TESLA",
+      "price": "339",
+      "location": "Sanski most",
+      "contact": "031-874-847",
+      "condition": "New",
+      "category": "House equipment",
+      "description": "ZAMRZIVAC TESLA, 198 LITARA, 5GODINA GARANCIJA",
+      "id": 5
     }
-  
-  ]
+  ],
+  "myitems": []
 }
