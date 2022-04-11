@@ -4,7 +4,7 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
 }
-/*# sourceMappingURL=row.css.map */
+/*# sourceMappingURL=styles.css.map */

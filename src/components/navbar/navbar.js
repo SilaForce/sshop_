@@ -1,24 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Tippy from "@tippyjs/react";
 import "../tippy";
+import { useSpring, animated } from "react-spring";
 
 const Navbar = () => {
+  const styles = useSpring({
+    from: { marginLeft: -500 },
+    to: { marginLeft: 0 },
+    config: { delay: 100 },
+  });
   return (
-    <div className="navbar">
+    <animated.div className="navbar" style={styles}>
       <div className="center">
         <div className="row">
           <Tippy
-            interactive={"true"}
             theme={"black"}
             placement="right"
-            content={
-              <ul className="no-bullets">
-                <li>Cars</li>
-                <li>Trucks</li>
-                <li>Bikes</li>
-              </ul>
-            }
+            content={<div>Vehicles</div>}
           >
             <motion.button whileHover={{ scale: 1.3 }} className="button">
               <img
@@ -34,17 +33,9 @@ const Navbar = () => {
       <div className="center">
         <div className="row">
           <Tippy
-            interactive={"true"}
             theme={"black"}
             placement="right"
-            content={
-              <ul className="no-bullets">
-                <li>Phones</li>
-                <li>TV</li>
-                <li>Computers</li>
-                <li>Consols</li>
-              </ul>
-            }
+            content={<div>Technology</div>}
           >
             <motion.button whileHover={{ scale: 1.3 }} className="button">
               <img
@@ -59,18 +50,7 @@ const Navbar = () => {
 
       <div className="center">
         <div className="row">
-          <Tippy
-            interactive={"true"}
-            theme={"black"}
-            placement="right"
-            content={
-              <ul className="no-bullets">
-                <li>Houses</li>
-                <li>Furniter</li>
-                <li>Land</li>
-              </ul>
-            }
-          >
+          <Tippy theme={"black"} placement="right" content={<div>House</div>}>
             <motion.button whileHover={{ scale: 1.3 }} className="button">
               <img
                 className="image"
@@ -84,18 +64,7 @@ const Navbar = () => {
 
       <div className="center">
         <div className="row">
-          <Tippy
-            interactive={"true"}
-            theme={"black"}
-            placement="right"
-            content={
-              <ul className="no-bullets">
-                <li>Pants</li>
-                <li>Shirts</li>
-                <li>Shoes</li>
-              </ul>
-            }
-          >
+          <Tippy theme={"black"} placement="right" content={<div>Clothes</div>}>
             <motion.button whileHover={{ scale: 1.3 }} className="button">
               <img
                 className="image"
@@ -106,7 +75,7 @@ const Navbar = () => {
           </Tippy>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 };
 

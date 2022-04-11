@@ -1,58 +1,52 @@
-import React, { Component } from "react";
-import { motion } from "framer-motion";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import Navbar from "../navbar/navbar";
-import Tippy from "@tippyjs/react";
-import "../tippy";
+import React, { useEffect, useState } from "react";
+
+import { useSpring, animated } from "react-spring";
+import Profile_butt from "../buttons/profile_butt";
+import Leftarrow_butt from "../buttons/leftarrow_butt";
+import Add_btn from "../buttons/add_butt";
+
+import { useLocation } from "react-router-dom";
+import Basket_butt from "../buttons/basket_butt";
+import Search from "../search/search";
 
 const Header = () => {
-  const [visible, setVisible] = React.useState(true);
-  const navigate = useNavigate();
+  const location = useLocation();
+  const [url, setUrl] = useState(location.pathname);
+  useEffect(() => {
+    if (location.pathname !== url) setUrl(location.pathname);
+    console.log("Url se promijenio");
+  }, [location]);
+
+  const styles = useSpring({
+    from: { marginTop: -500 },
+    to: [{ marginTop: 0 }],
+    config: { delay: 100 },
+  });
+
   return (
     <div>
-      <div className="header">
+      <animated.div className="header" style={styles}>
         <div className="center">
-          <motion.button
-            whileHover={{ scale: 1.2 }}
-            className="ham_button"
-            onClick={() => setVisible(!visible)}
-          >
-            <img
-              className="img_ham"
-              src={require("../../images/ham.svg").default}
-              alt=""
-            ></img>
-          </motion.button>
-
+          {url == "/" && <Profile_butt />}
+          {url == "/profile" && <Leftarrow_butt />}
+          {url == "/profile/basket" && <Leftarrow_butt />}
+          {url == "/add" && <Leftarrow_butt />}
+          {url == "/item" && <Leftarrow_butt />}
+          {url == "/myitems" && <Leftarrow_butt />}
           <img
             className="logo"
             src={require("../../images/SSlogo.png")}
             alt=""
           ></img>
-
-          <Tippy theme={"black"} content={<span>Profile</span>}>
-            <motion.button
-              onClick={() => navigate("/profile")}
-              whileHover={{ scale: 1.2 }}
-              className="prof_butt"
-            >
-              <img
-                className="profile"
-                src={require("../../images/profile.svg").default}
-                alt=""
-              ></img>
-            </motion.button>
-          </Tippy>
+          {url == "/" && <Add_btn />}
+          {url == "/profile" && <Basket_butt />}
+          {url == "/item" && <Basket_butt />}
+          {url == "/profile/basket" && <div className="right"></div>}
+          {url == "/add" && <div className="right"></div>}
+          {url == "/myitems" && <div className="right"></div>}
         </div>
-
-        <div className="center">
-          <input type="input" placeholder="Search" className="search"></input>
-
-          <button className="search_butt">
-            <img src={require("../../images/search.svg").default} alt=""></img>
-          </button>
-        </div>
-      </div>
+        {url == "/" && <Search />}
+      </animated.div>
     </div>
   );
 };

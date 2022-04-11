@@ -1,0 +1,37 @@
+.nvbar {
+  width: 230px;
+  max-height: 100vh;
+  background-color: black;
+  height: calc(100vh - 70px);
+  -webkit-box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 5px;
+  position: absolute;
+}
+
+.nvbar .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 50px auto;
+}
+
+.nvbar .info {
+  width: 180px;
+  height: 30px;
+  background-color: white;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
