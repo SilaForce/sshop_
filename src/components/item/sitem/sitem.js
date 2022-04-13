@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import { motion } from "framer-motion";
+import UpdateButton from "../../buttons/update_butt";
 
 function Sitem({ data }) {
-  const [items, setItems] = useState([]);
-
+  
   const location = useLocation();
   const [url, setUrl] = useState(location.pathname);
   useEffect(() => {
@@ -56,7 +56,7 @@ function Sitem({ data }) {
         {data.price}$
       </div>
       {url == "/profile" && (
-        <div className="delete-wrapper">
+        <div className="button-wrapper">
           <motion.button
             whileHover={{ scale: 1.1 }}
             className="delete-button"
@@ -67,6 +67,7 @@ function Sitem({ data }) {
               src={require("../../../images/delete.svg").default}
             />
           </motion.button>
+          <UpdateButton />
         </div>
       )}
     </div>
