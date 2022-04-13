@@ -1,0 +1,49 @@
+.info-wrapper
+{
+    width: 120vw;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .info-frame
+    {
+        width: 800px;
+        height: 500px;
+        background-color: black;
+        border-radius: 10px;
+        box-shadow: 6px 6px 4px grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .name
+        {
+            width: 350px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border-bottom: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            
+        }
+        .info
+        {
+           width: 350px;
+           height: 50px;
+           background-color: black;
+           color: white;
+           border-bottom: 1px solid white;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: 700;
+        }
+    }
+}

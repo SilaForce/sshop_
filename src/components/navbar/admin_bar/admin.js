@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { animated } from "react-spring";
 
-import { useNavigate } from "react-router-dom";
+import Info from "../../info";
+import MyItems from "../../myitems/index";
 
 const Anavbar = () => {
-  const navigate = useNavigate();
+  const [modul, setModul] = useState("");
+
   return (
-    <animated.div className="nvbar">
-      <div className="wrapper">
-        <div className="avatar">
-          <img src={require("../../../images/user.svg").default} />
+    <>
+      <animated.div className="nvbar">
+        <div className="wrapper">
+          <div className="avatar">
+            <img src={require("../../../images/user.svg").default} />
+          </div>
+          <div className="user">Amar Silajdzic</div>
+          <div className="info" onClick={() => setModul(<Info />)}>
+            Profile Details
+          </div>
+          <div className="info" onClick={() => setModul(<MyItems />)}>
+            My Items
+          </div>
+          <div className="info">Payment methods</div>
         </div>
-        <div className="user">Amar Silajdzic</div>
-        <div className="info">Profile Details</div>
-        <div className="info" onClick={() => navigate("/myitems")}>
-          My Items
-        </div>
-        <div className="info">Payment methods</div>
-      </div>
-    </animated.div>
+      </animated.div>
+      <div>{modul}</div>
+    </>
   );
 };
 export default Anavbar;

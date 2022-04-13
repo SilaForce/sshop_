@@ -1,0 +1,23 @@
+.myitems-wrapper
+{
+    width: 120vw;
+    height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .myitems
+    {
+      margin-left: 100px;
+      width: 1000px;
+      height: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: auto;
+  
+    }
+    .myitems::-webkit-scrollbar {
+      display: none;
+    }
+
+}
