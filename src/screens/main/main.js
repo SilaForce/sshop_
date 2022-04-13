@@ -1,11 +1,10 @@
 import React from "react";
-
-import Row from "../../components/row/row";
+import Feed from "../../components/feed/feed";
 
 const Main = () => {
   return (
     <div>
-      <Row />
+      <Feed />
     </div>
   );
 };
