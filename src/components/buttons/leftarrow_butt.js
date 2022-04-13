@@ -7,7 +7,7 @@ function Leftarrow_butt() {
   const navigate = useNavigate();
   return (
     <motion.button
-      onClick={() => navigate("/")}
+      onClick={() => navigate(-1)}
       whileHover={{ scale: 1.2 }}
       className="ham_button"
     >

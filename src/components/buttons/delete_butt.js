@@ -2,10 +2,17 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-function Delete_butt() {
+function Delete_butt(data) {
+  function DeleteItem(id) {
+    alert(id);
+  }
   return (
-    <div className="delete-wrapper">
-      <motion.button whileHover={{ scale: 1.2 }} className="delete-button">
+    <div className="button-wrapper">
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        className="delete-button"
+        onClick={() => DeleteItem(data.id)}
+      >
         <img
           className="delete-img"
           src={require("../../images/delete.svg").default}
