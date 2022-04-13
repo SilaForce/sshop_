@@ -1,3 +1,12 @@
+# Libraries used
+
+react-spring(npm install react-spring)
+axios( npm install axios)
+
+# Start json server
+
+npx json-server --watch src/data/itemsdata.json --port 4000
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
