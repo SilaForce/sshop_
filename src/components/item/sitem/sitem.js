@@ -55,7 +55,7 @@ function Sitem({ data }) {
       >
         {data.price}$
       </div>
-      {url == "/myitems" && (
+      {url == "/profile" && (
         <div className="delete-wrapper">
           <motion.button
             whileHover={{ scale: 1.1 }}
