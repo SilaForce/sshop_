@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 class Input extends React.Component {
   state = {
@@ -17,6 +15,19 @@ class Input extends React.Component {
   add = (e) => {
     const axios = require("axios");
     e.preventDefault();
+
+    if (
+      this.state.name === "" ||
+      this.state.price === "" ||
+      this.state.location === "" ||
+      this.state.contact === "" ||
+      this.state.description === "" ||
+      this.state.category === "" ||
+      this.state.condition === ""
+    ) {
+      alert("Empty field!!!");
+      return;
+    }
 
     this.setState({
       name: "",
