@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Item from "../../components/item/item";
+import { useLocation } from "react-router-dom";
 
 function ItemScreen() {
+  const location = useLocation();
+  const props = location.state;
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("http://localhost:4000/items")
       .then((res) => {
         return res.json();
       })
@@ -16,10 +19,7 @@ function ItemScreen() {
 
   return (
     <div>
-      {items &&
-        items.map((item) => {
-          return <Item data={item} />;
-        })}
+      <Item data={props} />;
     </div>
   );
 }
